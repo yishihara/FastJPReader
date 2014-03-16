@@ -1,0 +1,1 @@
+javascript:(function(){var script=document.createElement('script');script.src='https://raw.github.com/yishihara/FastJPReader/master/backend.js?v='+parseInt(Math.random()*99999999);;document.getElementsByTagName('head')[0].appendChild(script);})();
