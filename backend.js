@@ -1,6 +1,6 @@
 (function(){
   //loading tiny_segmenter
-  var tinysegmenter = 'https://dl.dropboxusercontent.com/u/264531403/tiny_segmenter-0.2.js';
+  var tinysegmenter = 'https://raw.github.com/yishihara/FastJPReader/master/tiny_segmenter-0.2.js';
   loadScript(tinysegmenter, doAll);
 
   function loadScript(src, onloadFunc){
