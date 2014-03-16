@@ -50,7 +50,7 @@
     document.getElementById('fastjpreaderoverlay').innerHTML = '<strong><div id="jptext" class="jptext"></div></strong>';
 
     segs = smarterSegmentation(segs);
-    alert(segs.join(" | "));
+    //alert(segs.join(" | "));
 
     displayTextWindow(segs, time);
   }
