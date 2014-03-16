@@ -80,6 +80,12 @@
         }
       }, ttime);
       ttime = time * Math.pow(interval, segs[i].length);
+      if(segs[i] == "、"){
+        ttime *= 3;
+      }
+      else if(segs[i] == "。"){
+        ttime *= 5;
+      }
     }
 
     displayText();
