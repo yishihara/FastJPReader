@@ -1,12 +1,12 @@
 (function(){
   //loading tiny_segmenter
-  var tinysegmenter = 'https://raw.github.com/yishihara/FastJPReader/master/tiny_segmenter-0.2.js';
+  var tinysegmenter = 'http://chasen.org/~taku/software/TinySegmenter/tiny_segmenter-0.2.js';
   loadScript(tinysegmenter, doAll);
 
   function loadScript(src, onloadFunc){
     var head = document.getElementsByTagName('head')[0];
     var script = document.createElement('script');
-    script.type = 'text/javascript';
+    script.type = 'application/javascript';
     script.async = true;
     script.onreadystatechange = function(){
       if(this.readyState == 'complete') everything();
