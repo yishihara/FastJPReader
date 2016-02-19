@@ -38,7 +38,7 @@
     document.getElementById("fastjpreaderoverlay").style.verticalAlign="bottom";
 
     var style = document.createElement("style");
-    style.innerHTML = ".jptext {font-size:300%; width:100%;} span.middle {color:red} span.left {float:left; text-align:right; vertical-align:middle; width:45%; line-height:200px;} span.right{float:right; text-align:left; width:55%; line-height:200px;}";
+    style.innerHTML = ".jptext {font-size:300%; width:100%;} span.jptextmiddle {color:red} span.jptextleft {float:left; text-align:right; vertical-align:middle; width:45%; line-height:200px;} span.jptextright{float:right; text-align:left; width:55%; line-height:200px;}";
     document.getElementsByTagName('head')[0].appendChild(style);
 
     var wordspermin = parseInt(prompt("毎分なん文字にしますか？（推薦４００字）"));
@@ -58,9 +58,10 @@
   function addingSpace(text){
     var redpos = Math.floor((text.length+1)/2)-1;
     if(redpos < 0) redpos = 0;
-    var redtext = "<span class=\"middle\">" + text[redpos] + "</span>";
+    var redtext = "<span class=\"jptextmiddle\">" + text[redpos] + "</span>";
     //var redtext = text[redpos];
-    var newtext = "<span class=\"left\">" + text.substring(0,redpos) + "</span>" + "<span class=\"right\">" + redtext + text.substring(redpos+1, text.length) + "</span>";
+    var newtext = "<span class=\"jptextleft\">" + text.substring(0,redpos) + "</span>" + "<span class=\"jptextright\">" + redtext + text.substring(redpos+1, text.length) + "</span>";
+
     return newtext;
   }
 
