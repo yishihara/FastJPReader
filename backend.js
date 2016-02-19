@@ -77,7 +77,9 @@
           displayText();
         }
         else{
-          document.getElementById("jptext").innerHTML = '<span class="left"><a href="javascript:(function(){document.body.removeChild(document.getElementById(\'fastjpreaderoverlay\'));})();">閉じる</a></span>';
+          document.body.removeChild(document.getElementById('fastjpreaderoverlay'));
+          //use this code if you want to not auto close
+          //document.getElementById("jptext").innerHTML = '<span class="left"><a href="javascript:(function(){document.body.removeChild(document.getElementById(\'fastjpreaderoverlay\'));})();">閉じる</a></span>';
         }
       }, ttime);
       ttime = time * Math.pow(interval, segs[i].length);
@@ -109,9 +111,18 @@
       else if((segs[i] >= "0" && segs[i] <= "9")){
         newseg[newseg.length-1] += segs[i];
       }
+      else if(isSpecialSymbolAddToPrevious(segs[i])){
+        newseg[newseg.length-1] += segs[i];
+      }
       else newseg.push(segs[i]);
     }
     return newseg;
+  }
+
+  function isSpecialSymbolAddToPrevious(c){
+    if(c == ')' || c == ']' || c == '}' || c == '」')
+      return true;
+    return false;
   }
 
   function isKanji(c){
