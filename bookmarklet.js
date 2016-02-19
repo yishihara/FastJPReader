@@ -1,1 +1,1 @@
-javascript:(function(){var script=document.createElement('script');script.src='https://cdn.rawgit.com/yishihara/fastjpreader/219cb56afa6bb3f7b7db89e61a66325d14f3ef87/backend.js?v='+parseInt(Math.random()*99999999);;document.getElementsByTagName('head')[0].appendChild(script);})();
+javascript:(function(){var script=document.createElement('script');script.src='https://cdn.rawgit.com/yishihara/fastjpreader/d53f0aae462881b326154fe0f64692377cd527f9/backend.js?v='+parseInt(Math.random()*99999999);;document.getElementsByTagName('head')[0].appendChild(script);})();
